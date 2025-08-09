@@ -113,8 +113,8 @@ class Zigbee2TasmotaDevice extends Devices
                                             switch ($key) {
                                                 case 'Color':
                                                         $RGB = ltrim($this->CIEToRGB($receivedDevice->X, $receivedDevice->Y, $this->GetValue('Dimmer'), true), '#');
-                                                        //$this->SetValue('Color', hexdec($RGB));
-                                                        $this->SetValue('Color', hexdec($receivedDevice->RGB));
+                                                        $this->SetValue('Color', hexdec($RGB));
+                                                        // $this->SetValue('Color', hexdec($receivedDevice->RGB));
                                                         break;
                                                 case 'ColorX':
                                                     $this->SetValue('ColorX', $receivedDevice->Color[0]);
